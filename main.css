@@ -47,3 +47,46 @@ button {
 #botao-cancelar {
     background-color: #f00;
 }
+
+ul {
+    display: flex;
+    /* flex-wrap: wrap; 
+    *  Para criar limite de exibição por linha, e cria um nova linha
+    */
+    flex-wrap: wrap;
+}
+
+ul li {
+    max-width: 25%;
+    list-style: none; /* Remove o ponto de marcação da lista */
+    /* Faz com que o position do link não vaze no layout e fique concentrado no elemento pai */
+    position: relative;
+    /* Limitar a altura */
+    max-height: 280px;
+    overflow-y: hidden;
+}
+
+ul li img {
+    width: 100%;
+}
+
+.overlay-imagem-link {
+    padding: 16px;/* Espaçamento interno */
+    background-color: rgba(0, 0, 0, 0.7);/* Cor de fundo com transparência */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0; /* Remove da tela */
+    /* Adiciona transição para opacidade e o timer de execução */
+    transition: all ease .5s;
+}
+
+.overlay-imagem-link a {
+    color: #fff;
+    text-decoration: none;
+}
+
+ul li:hover .overlay-imagem-link {
+    opacity: 1;
+}
