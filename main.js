@@ -2,16 +2,12 @@ $(document).ready(function() {
     // Eventos jQuery
     // Callback jQuery
     $('header button').click(function() {
-        alert("Expandir Formulário...");
-    })
-
-    $('form').on('submit', function(e) {
-        console.log("submit");
-        e.preventDefault();
-
-    })
+        // Expande o formulário
+        $('form').slideDown();
+    })   
 
     $('#botao-cancelar').click(function() {
-        alert("Recolher Formulário...");
-    })
+        // Recolhe o formulário
+        $('form').slideUp();
+    }) 
 })
